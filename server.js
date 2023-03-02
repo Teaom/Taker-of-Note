@@ -7,8 +7,10 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static('public'));
 
-const noteRoutes = require('./Routes/notesRoutes');
-const userRoutes = require('./Routes/userRoutes');
+const notesRoutes = require('./Routes/notesRoutes');
+app.use(notesRoutes);
+const publicRoutes = require('./Routes/publicRoutes');
+app.use(publicRoutes);
 
 app.listen(PORT, () => 
-console.log ('Listening on PORT: ${PORT}'));
+  console.log(`Listening on PORT: ${PORT}`));
