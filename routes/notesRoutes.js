@@ -1,11 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const {
-    v4: uuidv4
-} =require('uuid');
-const {
-    readAndAppend, readFromFile, deleteNote
-} = require('../helpers/fs');
+const { v4: uuidv4 } =require('uuid');
+const { readAndAppend, readFromFile, deleteNote} = require('../Help/fs');
 
 Router.get('/api/notes', (req, res) => {
     const { title, text } =req.body;
