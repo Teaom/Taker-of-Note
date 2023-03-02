@@ -12,5 +12,5 @@ app.use(notesRoutes);
 const publicRoutes = require('./Routes/publicRoutes');
 app.use(publicRoutes);
 
-app.listen(PORT, () => 
-  console.log(`Listening on PORT: ${PORT}`));
+app.listen(port, () => 
+  console.log(`Listening on PORT: ${port}`));
