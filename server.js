@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
-app.listen(process.env.PORT || 3001, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+const port = process.env.PORT || 3001;
 
 app.use(express.urlencoded({
     extended: true}));
